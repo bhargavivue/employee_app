@@ -8,8 +8,11 @@ class Employee(BaseModel):
 
     class Config:
         orm_mode = True
-
+        
 class NewEmployee(BaseModel):
     name: str
     department: str
     salary: float
+class AverageSalaryResponse(BaseModel):
+    department: str
+    average_salary: float
